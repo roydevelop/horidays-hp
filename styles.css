@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "maruminya";
+    src: url("./x12y12pxMaruMinya.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -42,14 +48,16 @@ body {
     color: #ff0000;
     font-weight: bold;
     font-size: 2em;
-    font-family: 'x10y12pxDonguriDuel', sans-serif;
-    font-weight: 1200;
+    font-family: 'maruminya', sans-serif;
     font-style: normal;
+    /* font-family: "DotGothic16", sans-serif;
+    font-weight: 1200;
+    font-style: normal; */
     color: #8f0101;
 }
 
 .new-anime {
-    color: #b600ad;
+    color: #0bc6ff;
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -758,7 +766,7 @@ body {
 .char-display {
     width: 200px;
     /* height: 200px; */
-    padding: 20px;
+    /* padding: 20px; */
     margin: 20px 40px;
     display: flex;
     flex-flow: column;
@@ -770,6 +778,12 @@ body {
 
 .char-display:hover {
     transform: scale(1.1);
+}
+
+.char-display img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .goods-logo {
@@ -796,33 +810,55 @@ body {
 }
 
 .goods-text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal; */
+
     font-size: 1.8em;
     font-weight: bold;
-    color: #3dffae;
+    color: #5fa5ff;
     white-space: nowrap;
-    /* -webkit-text-stroke: 1px black; */
     text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000;
+    2px 2px 0 #002b57,
+    -2px 2px 0 #002b57,
+    -2px -2px 0 #002b57,
+    2px -2px 0 #002b57;
 }
 .zukan-text {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+    /* font-family: "Hachi Maru Pop", cursive;
+    font-weight: 400;
+    font-style: normal; */
+    font-family: "Yuji Syuku", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.8em;
     font-weight: bold;
-    color: #3d40ff;
     white-space: nowrap;
     /* -webkit-text-stroke: 1px black; */
-    text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000;
+    /* text-shadow:
+    1px 1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff; */
+    -webkit-text-fill-color:transparent; /* （順序に関係なく）色を上書きする */
+    background:linear-gradient(to right,#f500fd,#ff4800,#fffb00,#07daff,#0068b7,#1d2088,#920783);
+    -webkit-background-clip: text;
+    display: inline-block;
+}
+.zukan-img {
+    height:120%;
 }
 .offer-text {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
     font-size: 1.8em;
     font-weight: bold;
     color: #fc9003;
@@ -1057,7 +1093,7 @@ body {
 }
 
 .official-text {
-    display: inline-block;
+    /* display: inline-block;
     font-size: 48px;
     font-family: "Roboto", sans-serif;
     font-weight: bold;
@@ -1066,8 +1102,10 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px black;
-    /* text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4); */
-    text-shadow: 3px 3px 1px rgba(0,0,0,0.3);
+    text-shadow: 3px 3px 1px rgba(0,0,0,0.3); */
+    width:80%;
+    height: auto;
+    object-fit: contain;
 }
 
 .merchandise-grid {
@@ -1449,9 +1487,12 @@ body {
     .official-banner h2 {
         font-size: 1.5em;
     }
+    .official-banner img{
+        width:100%;
+    }
     .grid-item{
         min-height: 0;
         box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4);
     }
-}
 
+}
