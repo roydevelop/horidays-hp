@@ -28,6 +28,133 @@ body {
     cursor: pointer;
 }
 
+/* ハンバーガーメニュー */
+.hamburger-menu {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 2000;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 3px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* メニューオーバーレイ */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-nav {
+    text-align: center;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin: 30px 0;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-overlay.active .menu-list li {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.menu-overlay.active .menu-list li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.menu-overlay.active .menu-list li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.menu-overlay.active .menu-list li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.menu-overlay.active .menu-list li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.menu-link {
+    font-family: 'maruminya', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 3px solid #000;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-link:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
 /* トップバナー */
 .top-banner {
     background: #ffd700;
@@ -190,7 +317,7 @@ body {
     /* border: 3px solid #000; */
     border-radius: 10px;
     /* padding: 20px; */
-    min-height: 250px;
+    /* min-height: 250px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1452,11 +1579,12 @@ body {
 
 /* レスポンシブ */
 @media (max-width: 768px) {
-    .top-banner-text {
-        font-size: 1.5em;
-    }
     body {
         background-size: 100px 100px;   
+    }
+    .top-banner-text {
+        font-size: 1em;
+        white-space: nowrap;
     }
     .horidays-logo {
         width: 100%;
@@ -1494,5 +1622,40 @@ body {
         min-height: 0;
         box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4);
     }
-
+    
+    .hamburger-menu {
+        top: 70px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .menu-link {
+        font-size: 2em;
+        padding: 8px 20px;
+    }
+    
+    .character-row {
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    
+    .char-display {
+        width: calc(33.333% - 10px);
+        margin: 10px 0;
+        flex: 1;
+        min-width: 0;
+    }
+    .goods-text {
+        font-size: 1em;
+        text-shadow:1px 1px 0 #002b57,
+        -1px 1px 0 #002b57,
+        -1px -1px 0 #002b57,
+        1px -1px 0 #002b57;
+    }
+    .offer-text {
+        font-size: 1em;
+    }
 }

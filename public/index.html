@@ -11,6 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&family=Potta+One&family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- ハンバーガーメニュー -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="メニュー">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    
+    <!-- メニューオーバーレイ -->
+    <div class="menu-overlay" id="menuOverlay">
+        <nav class="menu-nav">
+            <ul class="menu-list">
+                <li><a href="#top" class="menu-link">トップ</a></li>
+                <li><a href="#animation" class="menu-link">アニメーション</a></li>
+                <li><a href="#goods" class="menu-link">グッズ</a></li>
+                <li><a href="#official" class="menu-link">仕事オファー</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- トップバナー -->
     <div class="top-banner" data-clickable>
         <p class="top-banner-text">12時から新作アニメ「<span class="new-anime">玉舐め小僧</span>」UPするよ!</p>
@@ -26,7 +45,7 @@
     </section>
 
     <!-- キャラクターグリッド -->
-    <section class="grid-section">
+    <section class="grid-section" id="animation">
         <div class="character-grid">
             <!-- 寿司バー -->
             <div class="grid-item sushi-bar" data-clickable>
@@ -102,7 +121,7 @@
     </section>
 
     <!-- オフィシャルウェブサイトセクション -->
-    <section class="official-section">
+    <section class="official-section" id="goods">
         <div class="official-banner" data-clickable>
             <!-- <h2 class="official-text">HORIDAYS OFFICIAL WEBSITE</h2> -->
             <img src="images/1.png" alt="HORIDAYS STUDIO" class="official-text">
@@ -145,8 +164,7 @@
     <section class="footer-section">
         <p>©HORIDAYS STUDIO</p>
     </section>
-
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html>
 
