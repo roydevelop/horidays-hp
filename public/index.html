@@ -5,12 +5,14 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>HORIDAYS STUDIO</title>
+    <link rel="icon" type="image/png" href="images/IMG_7356.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&family=Potta+One&family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- ハンバーガーメニュー -->
     <button class="hamburger-menu" id="hamburgerMenu" aria-label="メニュー">
         <span class="hamburger-line"></span>
@@ -25,7 +27,8 @@
                 <li><a href="#top" class="menu-link">トップ</a></li>
                 <li><a href="#animation" class="menu-link">アニメーション</a></li>
                 <li><a href="#goods" class="menu-link">グッズ</a></li>
-                <li><a href="#official" class="menu-link">仕事オファー</a></li>
+                <li><a href="./characters.html" id="menu-link">キャラ図鑑</a></li>
+                <li><a href="./contact.html" id="menu-link" >仕事オファー</a></li>
             </ul>
         </nav>
     </div>
@@ -37,7 +40,6 @@
 
     <!-- メインロゴセクション -->
     <section class="logo-section">
-
         <div class="horidays-banner" data-clickable>
             <!-- <h1>HORIDAYS STUDIO</h1> -->
              <img src="images/IMG_7356.png" alt="HORIDAYS STUDIO" class="horidays-logo">
@@ -50,43 +52,42 @@
             <!-- 寿司バー -->
             <div class="grid-item sushi-bar" data-clickable>
                 <div class="sushi-counter">
-                    <img src="images/IMG_7349.gif" autoplay muted loop class="sushi-video"></video>
+                    <img src="images/IMG_7349.gif" autoplay muted loop class="sushi-video">
                 </div>
             </div>
 
             <!-- バブルガム少年 -->
             <div class="grid-item bubble-boy" data-clickable>
                 <div class="sushi-counter">
-                    <video src="videos/308073_small.mp4" autoplay muted loop class="sushi-video"></video>
-                </div>
+                    <img src="images/IMG_7349.gif" autoplay muted loop class="sushi-video">>
+                    </div>
             </div>
 
             <!-- 白いブロブキャラクター（帽子） -->
             <div class="grid-item blob-hat" data-clickable>
                 <div class="sushi-counter">
-                    <video src="videos/308073_small.mp4" autoplay muted loop class="sushi-video"></video>
+                    <img src="images/IMG_7349.gif" autoplay muted loop class="sushi-video">
                 </div>
             </div>
 
             <!-- ビジネスキャラクターコレクション -->
             <div class="grid-item business-chars" data-clickable>
                 <div class="sushi-counter">
-                    <video src="videos/308073_small.mp4" autoplay muted loop class="sushi-video"></video>
+                    <img src="images/IMG_7349.gif" autoplay muted loop class="sushi-video">
                 </div>
             </div>
 
             <!-- スケートボードキャラクター -->
             <div class="grid-item skateboard-chars" data-clickable>
                 <div class="sushi-counter">
-                    <video src="videos/308073_small.mp4" autoplay muted loop class="sushi-video"></video>
+                    <img src="images/IMG_7349.gif" autoplay muted loop class="sushi-video">
                 </div>
     
             </div>
-
             <!-- 水中シーン -->
             <div class="grid-item underwater-scene" data-clickable>
                 <div class="sushi-counter">
-                    <video src="videos/308073_small.mp4" autoplay muted loop class="sushi-video"></video>
+                    <img src="images/IMG_7349.gif" autoplay muted loop class="sushi-video">
                 </div>
             </div>
         </div>
@@ -98,25 +99,24 @@
             <div class="char-display blob-underwear" data-clickable>
                 <div class="goods-text-wrap">
                     <p class="goods-text">グッズ</p>
-                    <img src="images/1234.png" alt="">
+                    <img src="images/4.png" alt="moku-moku-fukidasi">
                 </div>
                 <img src="images/IMG_7411.png" alt="HORIDAYS STUDIO" class="goods-logo">
             </div>
             <div class="char-display daisy-char" data-clickable>
                 <div class="goods-text-wrap">
                     <!-- <p class="zukan-text">キャラ図鑑</p> -->
-                    <img src="images/3.png" alt="" class="zukan-img">
+                    <img src="images/IMG_7489.png" alt="" class="zukan-img">
                 </div>
                 <img src="images/IMG_7412.png" alt="HORIDAYS STUDIO" class="goods-logo">
             </div>
-            <div class="char-display salmon-phone" data-clickable>
+            <a href="./contact.html" class="char-display salmon-phone" data-clickable>
                 <div class="goods-text-wrap">
                     <p class="offer-text">仕事オファー</p>
-                    
                     <img src="images/IMG_7425.png" alt="">
                 </div>
                 <img src="images/IMG_7413.png" alt="HORIDAYS STUDIO" class="goods-logo">
-            </div>
+            </a>
         </div>
     </section>
 
@@ -141,9 +141,13 @@
             </div>
             <!-- <div class="merch-item keychains-item" data-clickable>
                 <img src="images/IMG_7350.png" alt="" class="foodie-img">
-            </div>
-        </div> -->
+            </div> -->
+        </div>
     </section>
+    <!-- <section class="main-form">
+        <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSf_OSmIe92Pm25Pg6oq12Uk1JxhQ2-j4Pdi2EAQ36RB0GgUyQ/viewform?embedded=true" width="640" height="554" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+
+    </section> -->
 
     <!-- フッター（サーモン寿司） -->
     <section class="nav-banner-section">

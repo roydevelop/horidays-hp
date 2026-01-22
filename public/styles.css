@@ -17,6 +17,11 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     font-family: 'Arial', 'MS Gothic', sans-serif;
     background: white;
@@ -26,6 +31,8 @@ body {
     background-size: 140px 140px;
     overflow-x: hidden;
     cursor: pointer;
+    max-width: 100%;
+    width: 100%;
 }
 
 /* ハンバーガーメニュー */
@@ -109,33 +116,23 @@ body {
 
 .menu-list li {
     margin: 30px 0;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.menu-overlay.active .menu-list li {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.menu-overlay.active .menu-list li:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.menu-overlay.active .menu-list li:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.menu-overlay.active .menu-list li:nth-child(3) {
-    transition-delay: 0.3s;
-}
-
-.menu-overlay.active .menu-list li:nth-child(4) {
-    transition-delay: 0.4s;
 }
 
 .menu-link {
+    font-family: 'maruminya', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 3px solid #000;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#menu-link {
     font-family: 'maruminya', sans-serif;
     font-size: 2.5em;
     font-weight: bold;
@@ -154,6 +151,12 @@ body {
     transform: translate(3px, 3px);
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4);
 }
+
+#menu-link:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
 
 /* トップバナー */
 .top-banner {
@@ -1580,11 +1583,26 @@ body {
 /* レスポンシブ */
 @media (max-width: 768px) {
     body {
-        background-size: 100px 100px;   
+        background-size: 100px 100px;
+    }
+    
+    * {
+        max-width: 100%;
+    }
+    
+    img, video {
+        max-width: 100%;
+        height: auto;
     }
     .top-banner-text {
         font-size: 1em;
-        white-space: nowrap;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .top-banner {
+        padding: 15px 10px;
     }
     .horidays-logo {
         width: 100%;
@@ -1598,14 +1616,47 @@ body {
         gap: 10px;
     }
     
+    /* merch セクション（SPレイアウト） */
     .merchandise-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 260px;
+    }
+
+    .merch-item {
+        margin: 0;
     }
     
     .center-character {
-        grid-column: 1;
-        grid-row: auto;
+        position: relative;
+        z-index: 2;
+        width: 55%;
+        max-width: 260px;
+        margin-top: 120px; /* モバイル時のみさらに下側に配置 */
+    }
+
+    .hoodie-item,
+    .socks-item {
+        position: absolute;
+        width: 45%;
+        max-width: 200px;
+        z-index: 1;
+    }
+
+    .hoodie-item {
+        top: 0;
+        left: 0;
+        transform: rotate(-25deg);
+        transform-origin: center center;
+    }
+
+    .socks-item {
+        top: 0;
+        right: 0;
+        transform: rotate(25deg);
+        transform-origin: center center;
     }
     
     .horidays-banner h1 {
@@ -1634,6 +1685,10 @@ body {
         font-size: 2em;
         padding: 8px 20px;
     }
+    #menu-link {
+        font-size: 2em;
+        padding: 8px 20px;
+    }
     
     .character-row {
         flex-wrap: nowrap;
@@ -1647,6 +1702,37 @@ body {
         margin: 10px 0;
         flex: 1;
         min-width: 0;
+    }
+    
+    .goods-logo {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+    }
+    
+    .nav-banner-section {
+        padding: 40px 10px;
+        margin-top: 40px;
+    }
+    
+    .character-row {
+        padding: 0 5px;
+    }
+    
+    .merchandise-grid {
+        padding: 0 10px;
+    }
+    
+    .official-section {
+        padding: 40px 10px;
+    }
+    
+    .logo-section {
+        padding: 60px 10px;
+    }
+    
+    .grid-section {
+        padding: 40px 10px;
     }
     .goods-text {
         font-size: 1em;

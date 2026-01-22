@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>お問い合わせ | HORIDAYS STUDIO</title>
+    <link rel="icon" type="image/png" href="images/IMG_7356.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image:
+                linear-gradient(to right, #000 3px, transparent 3px),
+                linear-gradient(to bottom, #000 3px, transparent 3px);
+            background-size: 140px 140px;
+        }
+        .contact-wrapper {
+            max-width: 640px;
+            margin: 80px auto 60px;
+            padding: 30px 20px;
+            background: #ffffff;
+            border: 3px solid #000;
+            border-radius: 16px;
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.4);
+        }
+        .contact-title {
+            font-family: "maruminya", "DotGothic16", system-ui, sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-desc {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .contact-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .contact-label {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .contact-label span {
+            color: #e60033;
+            font-size: 0.8rem;
+            margin-left: 4px;
+        }
+        .contact-input,
+        .contact-textarea {
+            padding: 10px 12px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+        }
+        .contact-textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+        .contact-input:focus,
+        .contact-textarea:focus {
+            box-shadow: 0 0 0 2px #ffd700;
+        }
+        .contact-error {
+            color: #e60033;
+            font-size: 0.8rem;
+            display: none;
+        }
+        .contact-success {
+            color: #2e7d32;
+            font-size: 0.95rem;
+            display: none;
+            padding: 12px;
+            background: #e8f5e9;
+            border: 2px solid #2e7d32;
+            border-radius: 8px;
+            margin-top: 16px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .contact-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .contact-actions {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+        .contact-button {
+            min-width: 140px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 3px solid #000;
+            background: #ffd700;
+            font-weight: bold;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .contact-button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+        }
+        .contact-button.secondary {
+            background: #fff;
+        }
+        .contact-note {
+            margin-top: 16px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #555;
+        }
+        .contact-back {
+            text-align: center;
+            margin-top: 24px;
+        }
+        .contact-back a {
+            font-size: 0.9rem;
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid #000;
+        }
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                margin: 60px 12px 40px;
+                padding: 20px 16px;
+            }
+            .contact-title {
+                font-size: 1.6rem;
+            }
+        }
+        .main-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+        .form {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>    
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="メニュー">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+    <div class="menu-overlay" id="menuOverlay">
+        <nav class="menu-nav">
+            <ul class="menu-list">
+                <li><a href="./index.html#top" id="menu-link">トップ</a></li>
+                <li><a href="./index.html#animation" id="menu-link">アニメーション</a></li>
+                <li><a href="./index.html#goods" id="menu-link">グッズ</a></li>
+                <li><a href="./characters.html" id="menu-link">キャラ図鑑</a></li>
+                <li><a href="./contact.html" id="menu-link" >仕事オファー</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="logo-section" id="top">
+        <div class="horidays-banner">
+            <img src="images/IMG_7356.png" alt="HORIDAYS STUDIO" class="horidays-logo">
+        </div>
+    </section>
+    <main class="main-form">
+        <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSf_OSmIe92Pm25Pg6oq12Uk1JxhQ2-j4Pdi2EAQ36RB0GgUyQ/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+    </main>
+    
+    <!-- <main class="contact-wrapper">
+        <h1 class="contact-title">お問い合わせ</h1>
+        <p class="contact-desc">
+            お仕事のご相談・コラボレーション・その他お問い合わせは、<br>
+            以下のフォームよりお気軽にお送りください。
+        </p> -->
+
+        <!-- mailto を利用したシンプルな送信（ユーザーのメールアプリが開きます） -->
+        <!-- <form id="contactForm">
+            <div class="contact-form">
+                <div class="contact-field">
+                    <label class="contact-label" for="name">お名前<span>必須</span></label>
+                    <input type="text" id="name" name="name" class="contact-input" required>
+                    <div class="contact-error" id="nameError">お名前を入力してください。</div>
+                </div>
+
+                <div class="contact-field">
+                    <label class="contact-label" for="email">メールアドレス<span>必須</span></label>
+                    <input type="email" id="email" name="email" class="contact-input" required>
+                    <div class="contact-error" id="emailError">正しいメールアドレスを入力してください。</div>
+                </div>
+
+                <div class="contact-field">
+                    <label class="contact-label" for="subject">件名</label>
+                    <input type="text" id="subject" name="subject" class="contact-input" placeholder="例）お仕事のご相談">
+                </div>
+
+                <div class="contact-field">
+                    <label class="contact-label" for="message">お問い合わせ内容<span>必須</span></label>
+                    <textarea id="message" name="message" class="contact-textarea" required></textarea>
+                    <div class="contact-error" id="messageError">お問い合わせ内容を入力してください。</div>
+                </div>
+            </div>
+
+            <div class="contact-actions">
+                <button type="button" class="contact-button" id="submitButton">送信</button>
+                <button type="reset" class="contact-button secondary">クリア</button>
+            </div>
+
+            <p class="contact-note" id="contactNote">
+                送信ボタンを押すと、お問い合わせ内容が送信されます。
+            </p>
+            <div class="contact-success" id="successMessage" style="display: none;">
+                お問い合わせを受け付けました。ありがとうございます。
+            </div>
+            <div class="contact-error" id="errorMessage" style="display: none;"></div>
+        </form>
+
+        <div class="contact-back">
+            <a href="index.html">← トップページに戻る</a>
+        </div>
+    </main> -->
+    <script src="script.js"></script>
+    <script>
+        (function() {
+            const form = document.getElementById('contactForm');
+            const submitButton = document.getElementById('submitButton');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            const contactNote = document.getElementById('contactNote');
+
+            // Firebase FunctionsのURL
+            // デプロイ後、実際のURLに置き換えてください
+            // 例: https://us-central1-horidays-hp.cloudfunctions.net/sendContactEmail
+            const FUNCTION_URL = 'https://us-central1-horidays-hp.cloudfunctions.net/sendContactEmail';
+
+            function showError(id, condition) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.style.display = condition ? 'block' : 'none';
+            }
+
+            function showMessage(element, message, isError) {
+                element.textContent = message;
+                element.style.display = 'block';
+                element.style.color = isError ? '#d32f2f' : '#2e7d32';
+                element.style.background = isError ? '#ffebee' : '#e8f5e9';
+                element.style.border = isError ? '2px solid #d32f2f' : '2px solid #2e7d32';
+                element.style.padding = '12px';
+                element.style.borderRadius = '8px';
+                element.style.marginTop = '16px';
+                element.style.textAlign = 'center';
+                element.style.fontWeight = 'bold';
+            }
+
+            function hideMessages() {
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+            }
+
+            function validate() {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                let valid = true;
+
+                showError('nameError', !name);
+                if (!name) valid = false;
+
+                const emailOk = !!email && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+                showError('emailError', !emailOk);
+                if (!emailOk) valid = false;
+
+                showError('messageError', !message);
+                if (!message) valid = false;
+
+                return valid;
+            }
+
+            submitButton.addEventListener('click', async function () {
+                if (!validate()) {
+                    hideMessages();
+                    return;
+                }
+
+                hideMessages();
+                
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                // ボタンを無効化
+                submitButton.disabled = true;
+                submitButton.textContent = '送信中...';
+
+                try {
+                    const response = await fetch(FUNCTION_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            message: message,
+                        }),
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok && data.success) {
+                        showMessage(successMessage, data.message || 'お問い合わせを受け付けました。ありがとうございます。', false);
+                        contactNote.style.display = 'none';
+                        form.reset();
+                        
+                        // 3秒後にメッセージを非表示
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                            contactNote.style.display = 'block';
+                        }, 5000);
+                    } else {
+                        showMessage(errorMessage, data.error || '送信に失敗しました。もう一度お試しください。', true);
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    showMessage(errorMessage, 'ネットワークエラーが発生しました。しばらくしてからもう一度お試しください。', true);
+                } finally {
+                    // ボタンを再有効化
+                    submitButton.disabled = false;
+                    submitButton.textContent = '送信';
+                }
+            });
+
+            // フォームリセット時にメッセージを非表示
+            form.addEventListener('reset', function() {
+                hideMessages();
+                contactNote.style.display = 'block';
+            });
+        })();
+    </script>
+</body>
+</html>
+
