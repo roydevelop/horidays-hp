@@ -4,6 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "maruminya";
     src: url("./x12y12pxMaruMinya.ttf");
@@ -25,7 +26,7 @@ html {
 body {
     font-family: 'Arial', 'MS Gothic', sans-serif;
     background: white;
-    background-image: 
+    background-image:
         linear-gradient(to right, #000 3px, transparent 3px),
         linear-gradient(to bottom, #000 3px, transparent 3px);
     background-size: 140px 140px;
@@ -71,7 +72,7 @@ body {
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
+    transform: rotate(45deg) translate(6px, 6px);
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(2) {
@@ -79,7 +80,7 @@ body {
 }
 
 .hamburger-menu.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(8px, -8px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* メニューオーバーレイ */
@@ -132,6 +133,7 @@ body {
     box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 #menu-link {
     font-family: 'maruminya', sans-serif;
     font-size: 2.5em;
@@ -286,9 +288,10 @@ body {
 /* .horidays-banner:hover {
     transform: scale(1.05);
 } */
- .horidays-logo{
+.horidays-logo {
     transition: transform 0.3s ease;
- }
+}
+
 .horidays-logo:hover {
     transform: scale(1.05);
 }
@@ -634,7 +637,8 @@ body {
     width: 100%;
 }
 
-.business-man, .business-woman {
+.business-man,
+.business-woman {
     width: 40px;
     height: 60px;
     background: white;
@@ -863,7 +867,7 @@ body {
 .nav-banner-section {
     padding: 80px 20px;
     background: transparent;
-    margin-top:80px;
+    margin-top: 80px;
 }
 
 .nav-banner {
@@ -925,16 +929,18 @@ body {
 .goods-text-wrap {
     position: relative;
 }
+
 .goods-text-wrap p {
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    margin:0;
-    padding:0;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
 }
+
 .goods-text-wrap img {
     width: 100%;
 }
@@ -952,11 +958,12 @@ body {
     color: #5fa5ff;
     white-space: nowrap;
     text-shadow:
-    2px 2px 0 #002b57,
-    -2px 2px 0 #002b57,
-    -2px -2px 0 #002b57,
-    2px -2px 0 #002b57;
+        2px 2px 0 #002b57,
+        -2px 2px 0 #002b57,
+        -2px -2px 0 #002b57,
+        2px -2px 0 #002b57;
 }
+
 .zukan-text {
     /* font-family: "DotGothic16", sans-serif;
     font-weight: 400;
@@ -976,14 +983,17 @@ body {
     -1px 1px 0 #ffffff,
     -1px -1px 0 #ffffff,
     1px -1px 0 #ffffff; */
-    -webkit-text-fill-color:transparent; /* （順序に関係なく）色を上書きする */
-    background:linear-gradient(to right,#f500fd,#ff4800,#fffb00,#07daff,#0068b7,#1d2088,#920783);
+    -webkit-text-fill-color: transparent;
+    /* （順序に関係なく）色を上書きする */
+    background: linear-gradient(to right, #f500fd, #ff4800, #fffb00, #07daff, #0068b7, #1d2088, #920783);
     -webkit-background-clip: text;
     display: inline-block;
 }
+
 .zukan-img {
-    height:120%;
+    height: 120%;
 }
+
 .offer-text {
     font-family: "DotGothic16", sans-serif;
     font-weight: 400;
@@ -995,10 +1005,10 @@ body {
     white-space: nowrap;
     /* -webkit-text-stroke: 1px black; */
     text-shadow:
-    1px 1px 0 #000,
-    -1px 1px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000;
+        1px 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000;
 }
 
 .blob-body-display {
@@ -1013,13 +1023,11 @@ body {
 .underwear-stripe {
     width: 100%;
     height: 30px;
-    background: repeating-linear-gradient(
-        90deg,
-        #4169e1 0px,
-        #4169e1 10px,
-        white 10px,
-        white 20px
-    );
+    background: repeating-linear-gradient(90deg,
+            #4169e1 0px,
+            #4169e1 10px,
+            white 10px,
+            white 20px);
     position: absolute;
     bottom: 0;
     border-radius: 0 0 50% 50%;
@@ -1046,13 +1054,11 @@ body {
 .daisy-cap-display {
     width: 100px;
     height: 50px;
-    background: repeating-linear-gradient(
-        45deg,
-        #ffd700 0px,
-        #ffd700 10px,
-        #000 10px,
-        #000 20px
-    );
+    background: repeating-linear-gradient(45deg,
+            #ffd700 0px,
+            #ffd700 10px,
+            #000 10px,
+            #000 20px);
     border: 3px solid #000;
     border-radius: 50% 50% 0 0;
     position: absolute;
@@ -1100,13 +1106,11 @@ body {
 .daisy-overalls-display {
     width: 80px;
     height: 80px;
-    background: repeating-linear-gradient(
-        45deg,
-        #ffd700 0px,
-        #ffd700 10px,
-        #000 10px,
-        #000 20px
-    );
+    background: repeating-linear-gradient(45deg,
+            #ffd700 0px,
+            #ffd700 10px,
+            #000 10px,
+            #000 20px);
     border: 3px solid #000;
     border-radius: 10px;
     position: absolute;
@@ -1233,7 +1237,7 @@ body {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px black;
     text-shadow: 3px 3px 1px rgba(0,0,0,0.3); */
-    width:80%;
+    width: 80%;
     height: auto;
     object-fit: contain;
 }
@@ -1267,12 +1271,13 @@ body {
 .foodie-img {
     width: 100%;
     /* height:100%; */
-    display:contain;
+    display: contain;
 }
+
 .char-img {
     width: 100%;
     /* height:100%; */
-    display:contain;
+    display: contain;
 }
 
 .hoodie-display {
@@ -1470,7 +1475,7 @@ body {
     width: 200%;
     height: 200%;
     object-fit: contain;
-    margin: 0 40px; 
+    margin: 0 40px;
 }
 
 .salmon-sushi-footer {
@@ -1506,35 +1511,81 @@ body {
 
 /* アニメーション */
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes wiggle {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(-5deg); }
-    75% { transform: rotate(5deg); }
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
 }
 
 @keyframes jump {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-30px) rotate(10deg); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
 }
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-10px); }
-    75% { transform: translateX(10px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 .animate-bounce {
@@ -1574,6 +1625,7 @@ body {
         opacity: 1;
         transform: translate(0, 0) scale(1);
     }
+
     100% {
         opacity: 0;
         transform: translate(var(--tx), var(--ty)) scale(0);
@@ -1585,37 +1637,41 @@ body {
     body {
         background-size: 100px 100px;
     }
-    
+
     * {
         max-width: 100%;
     }
-    
-    img, video {
+
+    img,
+    video {
         max-width: 100%;
         height: auto;
     }
+
     .top-banner-text {
         font-size: 1em;
         white-space: normal;
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
-    
+
     .top-banner {
         padding: 15px 10px;
     }
+
     .horidays-logo {
         width: 100%;
         height: auto;
         object-fit: contain;
         margin-bottom: 20px;
     }
+
     .character-grid {
         /* grid-template-columns: 1fr; */
         grid-template-rows: auto;
         gap: 10px;
     }
-    
+
     /* merch セクション（SPレイアウト） */
     .merchandise-grid {
         display: flex;
@@ -1628,13 +1684,14 @@ body {
     .merch-item {
         margin: 0;
     }
-    
+
     .center-character {
         position: relative;
         z-index: 2;
         width: 55%;
         max-width: 260px;
-        margin-top: 120px; /* モバイル時のみさらに下側に配置 */
+        margin-top: 120px;
+        /* モバイル時のみさらに下側に配置 */
     }
 
     .hoodie-item,
@@ -1658,89 +1715,94 @@ body {
         transform: rotate(25deg);
         transform-origin: center center;
     }
-    
+
     .horidays-banner h1 {
         font-size: 1.8em;
     }
-    
+
     .official-banner h2 {
         font-size: 1.5em;
     }
-    .official-banner img{
-        width:100%;
+
+    .official-banner img {
+        width: 100%;
     }
-    .grid-item{
+
+    .grid-item {
         min-height: 0;
         box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.4);
     }
-    
+
     .hamburger-menu {
         top: 70px;
         right: 15px;
         width: 45px;
         height: 45px;
     }
-    
+
     .menu-link {
         font-size: 2em;
         padding: 8px 20px;
     }
+
     #menu-link {
         font-size: 2em;
         padding: 8px 20px;
     }
-    
+
     .character-row {
         flex-wrap: nowrap;
         gap: 10px;
         justify-content: space-between;
         padding: 0 10px;
     }
-    
+
     .char-display {
         width: calc(33.333% - 10px);
         margin: 10px 0;
         flex: 1;
         min-width: 0;
     }
-    
+
     .goods-logo {
         width: 100% !important;
         height: auto !important;
         max-width: 100%;
     }
-    
+
     .nav-banner-section {
         padding: 40px 10px;
         margin-top: 40px;
     }
-    
+
     .character-row {
         padding: 0 5px;
     }
-    
+
     .merchandise-grid {
         padding: 0 10px;
     }
-    
+
     .official-section {
         padding: 40px 10px;
     }
-    
+
     .logo-section {
         padding: 60px 10px;
     }
-    
+
     .grid-section {
         padding: 40px 10px;
     }
+
     .goods-text {
         font-size: 1em;
-        text-shadow:1px 1px 0 #002b57,
-        -1px 1px 0 #002b57,
-        -1px -1px 0 #002b57,
-        1px -1px 0 #002b57;
+        text-shadow: 1px 1px 0 #002b57,
+            -1px 1px 0 #002b57,
+            -1px -1px 0 #002b57,
+            1px -1px 0 #002b57;
     }
+
     .offer-text {
         font-size: 1em;
     }
